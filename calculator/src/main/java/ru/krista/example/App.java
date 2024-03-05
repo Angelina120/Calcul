@@ -1,17 +1,12 @@
 package ru.krista.example;
 
-/**
- * Hello world!
- */
-public final class App {
-    private App() {
-    }
+import java.util.Scanner;
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
+public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner in = new Scanner(System.in);
+        String input = in.nextLine();
+        String[] parts = input.split("");
+
     }
 }

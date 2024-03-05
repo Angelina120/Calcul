@@ -30,30 +30,31 @@ public class Calculator {
         n2 = Integer.parseInt(partsss[2]);
     } catch (NumberFormatException exception) {
         System.out.println("Ошибка ввода!");
+        return 0;
     }
-
+    scanner.close();
     switch (operation) {
         case "+":{
-            result = add(n1,n2);
-            break;
+            return add(n1,n2);
+            
         }
         case "-":{
-            result = sub(n1,n2);
-        break;
+            return sub(n1,n2);
+        
         }   
         case "/": {
-            result = div(n1,n2);
-        break;
+            return div(n1,n2);
+        
         }
         case "*": {
-            result = mul(n1,n2);
-        break;
+           return mul(n1,n2);
+        
         }
-            
-    }
-    
-    scanner.close();
-    return result;
+        default: {
+            return 0;
+        }
+        
+    } 
 }
     
 }

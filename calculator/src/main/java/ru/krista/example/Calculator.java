@@ -19,7 +19,6 @@ public class Calculator {
     }
     public int stringe(String[] parts){
         System.out.println("Ввод ");
-        int result = 0;
         int n1 = 0, n2 = 0;
         Scanner scanner = new Scanner(System.in);
         String partss = scanner.nextLine();
@@ -28,11 +27,13 @@ public class Calculator {
     try {
         n1 = Integer.parseInt(partsss[0]);
         n2 = Integer.parseInt(partsss[2]);
+        scanner.close();
     } catch (NumberFormatException exception) {
         System.out.println("Ошибка ввода!");
+        scanner.close();
         return 0;
     }
-    scanner.close();
+    
     switch (operation) {
         case "+":{
             return add(n1,n2);
